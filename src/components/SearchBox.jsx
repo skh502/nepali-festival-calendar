@@ -8,6 +8,7 @@ function SearchBox() {
   const {query, setQuery} = useFestivalContext()
   const inputRef = useRef(null);
 
+  // function to remove focus from the search box on pressing the "Enter" key
   const handleKeyPress = (e) => {
     if (e.key === 'Enter') {
       e.preventDefault() 

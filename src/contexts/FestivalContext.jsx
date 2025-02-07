@@ -1,7 +1,5 @@
 import React, {createContext, useContext, useState } from 'react'
 import festivals from '../data/festivals';
-// import festivals from '../data/festivals';
-
 
 const FestivalContext = createContext();
 
@@ -11,14 +9,14 @@ export const FestivalProvider = ({children}) => {
 
     const [view, setView] = useState(true)  
     const [query, setQuery] = useState('')
-    // const [notes, setNotes] = useState(true)
-    // const [event, setEvent] = useState("")
 
-    
+    // function to switch the display between calendar & list view
     const toogleview = (selection)=>{
         setView(selection)  
     }
 
+    // function to search the festival on the basis of input of festival name or date
+    // that starts with the typed letters
 
     // const inputsearch = ()=>{
     //     return festivals.filter( festival => 
@@ -27,6 +25,8 @@ export const FestivalProvider = ({children}) => {
     //     )
     // }
 
+    // function to search the festival on the basis of input of festival name or date
+    // that includes the typed letters
     const inputsearch = ()=>{
         return festivals.filter( festival => 
             festival.name.toLowerCase().includes(query.toLowerCase()) ||
@@ -38,10 +38,7 @@ export const FestivalProvider = ({children}) => {
     const value = { 
         view,
         toogleview, 
-
         query, setQuery, inputsearch ,
-        // notes, setNotes
-        // event, setEvent
     }
 
     return <FestivalContext.Provider value={value} >

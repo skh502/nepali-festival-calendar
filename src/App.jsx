@@ -7,6 +7,8 @@ import { useFestivalContext } from './contexts/FestivalContext'
 import festivals from './data/festivals'
 import FestivalDetails from './components/FestivalDetails'
 import DynamicDisplay from './components/DynamicDisplay'
+import { FaGithub } from "react-icons/fa";
+
 
 function App() {
 
@@ -15,7 +17,12 @@ function App() {
 
   return (
     <>
-      <h2 className="text-xl font-semibold text-center mt-6">Nepali Festivals Calendar</h2>
+      <div className='relative' >
+        <h2 className="text-xl font-semibold text-center mt-6">Nepali Festivals Calendar</h2>
+        <a className='absolute top-0 right-8' 
+         href="https://github.com/skh502/nepali-festival-calendar.git" target='_blank' ><FaGithub />
+        </a>
+      </div>
       <SearchBox/>
       <DynamicDisplay/>
 

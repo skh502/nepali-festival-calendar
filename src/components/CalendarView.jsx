@@ -11,6 +11,8 @@ function CalendarView() {
 
   const {view, query, inputsearch} = useFestivalContext()
 
+  // function to handle the click on the calendar date
+  // it finds the selected date from the festival data if present
   const handleDateClick = (date) => {
     // alert("date: "+date)
     setSelectedDate(date);
@@ -18,6 +20,8 @@ function CalendarView() {
     setFestivalDetails(festival || null);
   };
 
+
+  // function to add class to the calender date section if festival is present
   const tileClassName = ({ date }) => {
     const festival = festivals.find(festival => new Date(festival.date).toDateString() === date.toDateString());
     return festival ? 'has-festival' : '';
@@ -25,7 +29,6 @@ function CalendarView() {
 
   return (
     <div className="flex flex-col gap-8 justify-around md:flex-row">
-      {/* justify-around  gap-40*/}
         <Calendar
           onClickDay={handleDateClick}
           tileClassName={tileClassName} 

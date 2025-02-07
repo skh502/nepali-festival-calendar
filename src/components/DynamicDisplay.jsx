@@ -5,8 +5,6 @@ import FestivalDetails from './FestivalDetails';
 function DynamicDisplay() {
     const {query, inputsearch} = useFestivalContext()
 
-    // const display = inputsearch()
-
     const [display, setDisplay] = useState([]);
     
     useEffect(()=>{
