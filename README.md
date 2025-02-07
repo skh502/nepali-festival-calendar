@@ -1,4 +1,4 @@
-# Nepali Festivals Calendar
+# Nepali Festival Calendar
 
 A React-based web application to explore Nepali festivals. Users can search for festivals, view details, and add personal notes to festival dates.
 
